@@ -1,0 +1,7 @@
+FROM node:18.17.0-alpine
+WORKDIR /usr/src/ari-cube-backend
+COPY . .
+RUN npm i
+RUN npm run tsc
+EXPOSE 3002
+CMD ["npm", "start"]
